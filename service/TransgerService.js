@@ -6,7 +6,7 @@ const logger = require("../utils/logs");
 
 async function upload(ctx, next) {
     let { fPath } = ctx.request.body;
-    if (/^\/.*/.test(fPath)) return ctx.body = { status: "failed", message: "Illegal fPath" };
+    if (!/^\/.*/.test(fPath)) return ctx.body = { status: "failed", message: "Illegal fPath" };
     let parentPath = `${filePathPre}${fPath}`;
     logger.info(`upload file to ${parentPath}`);
     if (!fs.existsSync(parentPath)) fs.mkdirSync(parentPath);
