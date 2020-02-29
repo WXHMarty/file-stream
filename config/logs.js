@@ -31,7 +31,7 @@ module.exports = {
             "pattern": "-yyyy-MM-dd-hh.log",
             "alwaysIncludePattern": true,
             "encoding": "utf-8",
-            "maxLogSize": 1000,
+            "maxLogSize": 1000 * 1024 * 1024,
             "numBackups": 3,
             "path": errorPath
         },
@@ -41,7 +41,7 @@ module.exports = {
             "pattern": "-yyyy-MM-dd-hh.log",
             "alwaysIncludePattern": true,
             "encoding": "utf-8",
-            "maxLogSize": 1000,
+            "maxLogSize": 1000 * 1024 * 1024,
             "numBackups": 3,
             "path": responsePath
         },
@@ -51,7 +51,7 @@ module.exports = {
             "pattern": "-yyyy-MM-dd-hh.log",
             "alwaysIncludePattern": true,
             "encoding": "utf-8",
-            "maxLogSize": 1000,
+            "maxLogSize": 1000 * 1024 * 1024,
             "numBackups": 3,
             "path": responsePath
         }
